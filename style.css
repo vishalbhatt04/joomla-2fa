@@ -1,0 +1,596 @@
+/* General */
+body {
+    margin: 0;
+}
+
+.vcontainer {
+    font-size: 16px;
+    padding: 3em 4em;
+}
+
+@media screen and (max-width:480px) {
+    .vcontainer {
+        font-size: 14px;
+    }
+}
+
+.vrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.vcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vtitle {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.vheader {
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.vcontent {
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.vlink {
+    text-decoration: none;
+    color: #EB5424;
+}
+
+.vbtn {
+    border: none;
+    border-radius: 10px;
+    background-color: #EB5424;
+    font-family: "Poppins";
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    padding: 10px 35px;
+    transition: all 0.5s ease;
+}
+
+.vbtn:hover {
+    background-color: #c62e00;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+.vhero {
+    justify-content: space-evenly;
+}
+
+.vhero-title {
+    width: 55%;
+    gap: 1.5em;
+}
+
+.vhero-title h1 {
+    font-size: 2.5em;
+}
+
+.vhero-btn {
+    justify-content: start;
+    gap: 1em;
+}
+
+.vhero-img {
+    width: 40%;
+}
+
+.vhero-img img {
+    width: 100%;
+}
+
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    background-color: #f8f8f8;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #444;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.mySlides .vrow {
+    gap: 3em;
+    justify-content: center;
+}
+
+.slide-img {
+    width: 35%;
+    align-items: center;
+}
+
+.slide-img iframe {
+    width: 500px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+}
+
+.slide-content {
+    width: 50%;
+    gap: 1em;
+}
+
+.slide-content h3 {
+    font-size: 1.5em;
+}
+
+.slide-content .vbtn {
+    background-color: white;
+    border: 2px solid #EB5424;
+    color: #EB5424;
+}
+
+.slide-content .vbtn:hover {
+    background-color: #EB5424;
+    color: white;
+}
+
+.slide-img img {
+    width: 75%;
+}
+
+
+/* Features */
+.vfeatures .vrow {
+    margin: 2em 0em;
+    gap: 1em;
+}
+
+.vfeatures-box {
+    width: 28%;
+    min-width: 300px;
+    padding: 1em;
+    text-align: center;
+    justify-content: start;
+    gap: 0.5em;
+}
+
+.vfeatures-box .vrow {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.vfeatures-box i {
+    font-size: 2.5em;
+    color: #EB5424;
+}
+
+.vfeatures-box h3 {
+    font-size: 1.25em;
+}
+
+.vfeatures-box p {
+    font-size: 0.9em;
+}
+
+
+/* Supported Apps */
+.vsupport {
+    background-color: #f8f8f8;
+}
+
+.vsupport .vrow {
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.vsupport h3 {
+    font-size: 1.5em;
+}
+
+.vapps {
+    width: 48%;
+    min-width: 300px;
+    padding: 1em 0em;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+}
+
+.vapps .vrow {
+    gap: 3em 2em;
+    align-items: center;
+}
+
+.vapps-box {
+    width: 100px;
+    text-align: center;
+    cursor: default;
+    transition: all 0.5s ease;
+}
+
+.vapps-box a {
+    text-decoration: none;
+}
+
+.vapps-box img {
+    width: 60px;
+}
+
+.vapps-box h4 {
+    color: black;
+    font-weight: 500;
+}
+
+.vapps-box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#vzoho {
+    width: 100px;
+}
+
+.vmethods {
+    width: 35%;
+    min-width: 300px;
+    padding: 1em 0em;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+}
+
+.vmethods a {
+    text-decoration: none;
+}
+
+.vmethods .vrow {
+    gap: 2em;
+}
+
+.vmethods-box {
+    width: 180px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.vmethods-box img {
+    width: 60px;
+}
+
+.vmethods-box h4 {
+    color: black;
+    font-weight: 500;
+}
+
+.vmethods-box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* Pricing Section */
+.vpricing .vrow {
+    gap: 5em;
+}
+
+.vpricing-box {
+    width: 25%;
+    min-width: 300px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 2em;
+    text-align: center;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+    transition: all 0.5s;
+}
+
+.vpricing-box:hover {
+    border: 2px solid #EB5424;
+    cursor: default;
+}
+
+.vpricing-box h3 {
+    font-size: 2em;
+    color: #EB5424;
+    margin-bottom: 0.5em;
+}
+
+.vpricing-box h4 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.vpricing-box p {
+    font-size: 0.85em;
+}
+
+.vpricing-features {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+
+.vpricing-features .vrow {
+    justify-content: flex-start;
+    text-align: start;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: nowrap;
+    margin: 0.5em 0em;
+}
+
+.vpricing-box .fa-check {
+    color: green;
+}
+
+.vpricing-box .fa-xmark {
+    color: red;
+}
+
+.vfree {
+    font-size: 2.5em !important;
+    margin-bottom: 0em !important;
+    color: #EB5424 !important;
+}
+
+.vpremium {
+    margin-bottom: 2em;
+}
+
+.vpremium p {
+    font-size: 1.1em;
+    margin: 0.5em 0em;
+}
+
+.vpremium select {
+    font-size: 1em;
+    padding: 0.5em 0.5em;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+}
+
+
+/* FAQ */
+.vbase {
+    background-color: #f8f8f8;
+}
+
+.vbase .vrow {
+    gap: 4em;
+}
+
+.vfaqs {
+    width: 35%;
+    min-width: 300px;
+    padding: 2em;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.vfaqs h3 {
+    font-size: 1.5em;
+}
+
+.faq-page {
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding: 0.5em;
+}
+
+.faq-body {
+    font-size: 0.95em;
+    line-height: 1.5;
+    padding: 2em;
+    display: none;
+    overflow: hidden;
+}
+
+.faq-page:hover {
+    color: #EB5424;
+    background-color: #F2F2F2;
+}
+
+.faq-page.active {
+    background-color: #F2F2F2;
+    color: #EB5424;
+}
+
+.faq-page:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq-page.active:after {
+    content: "\2796";
+}
+
+.hr-line {
+    border: 1px solid #ddd;
+}
+
+.vdocs {
+    min-width: 300px;
+    width: 35%;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 2em;
+}
+
+.vdocs h3 {
+    font-size: 1.5em;
+}
+
+.vdocs .vcolumn {
+    gap: 1em;
+}
+
+.vdocs .vcolumn a {
+    font-size: 1.15em;
+    text-decoration: none;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-left: 1em;
+}
+
+.vdocs a:hover {
+    color: #EB5424;
+}
+
+.vdocs i {
+    color: #EB5424;
+}
+
+.vdocs span {
+    margin-left: 3em;
+}
+
+
+/* Form Integrations */
+.vlogin {
+    justify-content: space-evenly;
+}
+
+.vlogin a {
+    text-decoration: none;
+}
+
+.vlogin-title {
+    width: 35%;
+    min-width: 300px;
+    text-align: center;
+    gap: 1em;
+}
+
+.vlogin .vrow {
+    gap: 0.5em 1.5em;
+    width: 60%;
+}
+
+.vlogin-box {
+    width: 170px;
+    height: 150px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    transition: all 0.3s;
+}
+
+.vlogin-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.vlogin-box img {
+    width: 80px;
+}
+
+.vlogin-box p {
+    font-weight: 500;
+    color: black;
+}
+
+#vbz {
+    width: 130px;
+    padding-bottom: 1em;
+}
+
+
+/* Why miniOrange */
+.vwhy {
+    background-color: #f8f8f8;
+}
+
+.vwhy .vrow {
+    gap: 2em;
+    padding: 1em 0em;
+}
+
+.vwhy-box {
+    width: 20%;
+    min-width: 250px;
+    min-height: 300px;
+    padding: 1em;
+    box-shadow: 0 0 0 2px rgb(56 60 67 / 6%), 0 1px 3px 0 rgb(56 60 67 / 15%);
+    border-radius: 20px;
+    text-align: center;
+    gap: 0.5em;
+    cursor: default;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.vwhy-box i {
+    font-size: 2.5em;
+    color: #EB5424;
+}
+
+.vwhy-box h4 {
+    font-size: 1.25em;
+}
